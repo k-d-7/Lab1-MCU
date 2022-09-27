@@ -91,7 +91,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  /*Ex3*/
+  /*Ex4*/
   int counter = 10;
   while (1)
   {
