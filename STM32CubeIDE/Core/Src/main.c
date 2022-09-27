@@ -102,7 +102,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  /*Ex4*/
+  /*Ex5*/
   int counter = 10;
   while (1)
   {
