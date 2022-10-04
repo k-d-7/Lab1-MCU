@@ -27,23 +27,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000029  00000000  00000000  00020018  2**0
                   CONTENTS, READONLY
- 12 .debug_info   00003038  00000000  00000000  00020041  2**0
+ 12 .debug_info   00003020  00000000  00000000  00020041  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 00000eac  00000000  00000000  00023079  2**0
+ 13 .debug_abbrev 00000e94  00000000  00000000  00023061  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_aranges 000003d8  00000000  00000000  00023f28  2**3
+ 14 .debug_aranges 000003d8  00000000  00000000  00023ef8  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_ranges 00000350  00000000  00000000  00024300  2**3
+ 15 .debug_ranges 00000350  00000000  00000000  000242d0  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  000155aa  00000000  00000000  00024650  2**0
+ 16 .debug_macro  000155aa  00000000  00000000  00024620  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   000045a0  00000000  00000000  00039bfa  2**0
+ 17 .debug_line   000045a0  00000000  00000000  00039bca  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000798da  00000000  00000000  0003e19a  2**0
+ 18 .debug_str    000798da  00000000  00000000  0003e16a  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  000b7a74  2**0
+ 19 .comment      00000053  00000000  00000000  000b7a44  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00000d58  00000000  00000000  000b7ac8  2**2
+ 20 .debug_frame  00000d58  00000000  00000000  000b7a98  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -150,7 +150,7 @@ int main(void)
 	   HAL_Delay(1000);
  8000190:	f44f 707a 	mov.w	r0, #1000	; 0x3e8
  8000194:	f000 f9ee 	bl	8000574 <HAL_Delay>
-  {
+	   counter--;
  8000198:	e7e3      	b.n	8000162 <main+0x16>
  800019a:	bf00      	nop
  800019c:	66666667 	.word	0x66666667
