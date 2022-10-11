@@ -49,7 +49,7 @@
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 /* USER CODE BEGIN PFP */
-
+void clearAllClock();
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -93,18 +93,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   /*Ex7*/
   int count = 12;
-  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, 1);
-  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, 1);
-  HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, 1);
-  HAL_GPIO_WritePin(LED4_GPIO_Port, LED4_Pin, 1);
-  HAL_GPIO_WritePin(LED5_GPIO_Port, LED5_Pin, 1);
-  HAL_GPIO_WritePin(LED6_GPIO_Port, LED6_Pin, 1);
-  HAL_GPIO_WritePin(LED7_GPIO_Port, LED7_Pin, 1);
-  HAL_GPIO_WritePin(LED8_GPIO_Port, LED8_Pin, 1);
-  HAL_GPIO_WritePin(LED9_GPIO_Port, LED9_Pin, 1);
-  HAL_GPIO_WritePin(LED10_GPIO_Port, LED10_Pin, 1);
-  HAL_GPIO_WritePin(LED11_GPIO_Port, LED11_Pin, 1);
-  HAL_GPIO_WritePin(LED12_GPIO_Port, LED12_Pin, 0);
+  clearAllClock();
   while (1)
   {
 	   switch (count) {
@@ -237,7 +226,20 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+void clearAllClock() {
+	HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, 1);
+	HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, 1);
+	HAL_GPIO_WritePin(LED3_GPIO_Port, LED3_Pin, 1);
+	HAL_GPIO_WritePin(LED4_GPIO_Port, LED4_Pin, 1);
+	HAL_GPIO_WritePin(LED5_GPIO_Port, LED5_Pin, 1);
+	HAL_GPIO_WritePin(LED6_GPIO_Port, LED6_Pin, 1);
+	HAL_GPIO_WritePin(LED7_GPIO_Port, LED7_Pin, 1);
+	HAL_GPIO_WritePin(LED8_GPIO_Port, LED8_Pin, 1);
+	HAL_GPIO_WritePin(LED9_GPIO_Port, LED9_Pin, 1);
+	HAL_GPIO_WritePin(LED10_GPIO_Port, LED10_Pin, 1);
+	HAL_GPIO_WritePin(LED11_GPIO_Port, LED11_Pin, 1);
+	HAL_GPIO_WritePin(LED12_GPIO_Port, LED12_Pin, 0);
+}
 /* USER CODE END 4 */
 
 /**
