@@ -278,15 +278,15 @@ static void MX_GPIO_Init(void)
  800024a:	687b      	ldr	r3, [r7, #4]
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, LED_RED_Pin|LED_YELLOW_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4|LED_RED_Pin|LED_YELLOW_Pin|GPIO_PIN_7, GPIO_PIN_RESET);
  800024c:	2200      	movs	r2, #0
- 800024e:	2160      	movs	r1, #96	; 0x60
+ 800024e:	21f0      	movs	r1, #240	; 0xf0
  8000250:	480b      	ldr	r0, [pc, #44]	; (8000280 <MX_GPIO_Init+0x60>)
  8000252:	f000 fb87 	bl	8000964 <HAL_GPIO_WritePin>
 
-  /*Configure GPIO pins : LED_RED_Pin LED_YELLOW_Pin */
-  GPIO_InitStruct.Pin = LED_RED_Pin|LED_YELLOW_Pin;
- 8000256:	2360      	movs	r3, #96	; 0x60
+  /*Configure GPIO pins : PA4 LED_RED_Pin LED_YELLOW_Pin PA7 */
+  GPIO_InitStruct.Pin = GPIO_PIN_4|LED_RED_Pin|LED_YELLOW_Pin|GPIO_PIN_7;
+ 8000256:	23f0      	movs	r3, #240	; 0xf0
  8000258:	60bb      	str	r3, [r7, #8]
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
  800025a:	2301      	movs	r3, #1
