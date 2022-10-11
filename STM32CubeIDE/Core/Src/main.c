@@ -94,29 +94,20 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   /*Ex10*/
-  int count = 12;
-  int flag = 1;
-  clearAllClock();
+  int hour = 0;
+  int min = 1;
+  int sec = 2;
+
   while (1)
   {
-	  if (flag == 1) {
-		  setNumberOnClock(count);
-	  }
-	  else {
-		  clearNumberOnClock(count);
-	  }
-	  count--;
-
-	  if (count < 0) {
-		  count = 12;
-		  if (flag == 1) {
-			  flag = 0;
-		  }
-		  else {
-			  flag = 1;
-		  }
-	  }
-	   HAL_Delay(500);
+	  hour = rand() % 12;
+	  min = rand() % 12;
+	  sec = rand() % 12;
+	  clearAllClock();
+	  setNumberOnClock(hour);
+	  setNumberOnClock(min);
+	  setNumberOnClock(sec);
+	  HAL_Delay(2000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
