@@ -92,7 +92,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  /*Ex8*/
+  /*Ex9*/
   int count = 12;
   clearAllClock();
   while (1)
